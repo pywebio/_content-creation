@@ -1,63 +1,34 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import Feature from './Feature';
 
-const FeatureList = [
-  {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
-];
+const testCode = `import openai
+from pywebio import start_server
+from pywebio.output import put_table
+from pywebio.input import input
+import os
 
-function Feature({Svg, title, description}) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+def openai_response(question):
+    response = openai.Completion.create(
+        engine="davinci",
+        prompt=question,
+        temperature=0.5,
+        max_tokens=100,
+        top_p=0.3,
+        frequency_penalty=0.6,
+        presence_penalty=0.0,
+        stop=['']
+    )
+    return '{}'.format(response.choices[0].text[6:])`.trim();
 
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
+        <Feature code={testCode} />
       </div>
     </section>
   );
