@@ -15,3 +15,15 @@ slorber:
   title: Docusaurus maintainer
   url: https://sebastienlorber.com
   image_url: https://github.com/slorber.png
+
+terrell:
+  name: Jeff Terrell
+  title: Generalist
+  url: https://github.com/JeffTerrell
+  image_url: https://github.com/JeffTerrell.png
+
+young:
+  name: Hannah Young
+  title: Software Developer
+  url: https://github.com/Corgibyte
+  image_url: https://github.com/Corgibyte.png
