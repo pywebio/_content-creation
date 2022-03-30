@@ -6,7 +6,8 @@ const preStyle = {
   overflow: "scroll",
   height: "25rem",
   width: "40rem",
-  margin: "0.5rem 0 0.5rem 2rem",
+  maxWidth: "90vw",
+  margin: "4rem 0 4rem 1rem",
 };
 
 const CodeBlock = ({ code }) => (
