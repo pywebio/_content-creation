@@ -21,10 +21,14 @@ const headingStyle = {
   margin: "auto"
 };
 
+const leftColStyle = {
+  marginRight: "2rem"
+};
+
 function Feature({ feature }) {
   return (
     <div className="row" style={getRowStyle(feature)}>
-      <div className="md-col-6">
+      <div className="md-col-6" style={leftColStyle}>
         <h3 style={headingStyle}>{feature.title}</h3>
         <img src={feature.url} style={imgStyle} />
       </div>
