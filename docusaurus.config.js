@@ -6,9 +6,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Low code Python web framework',
+  title: 'PyWebIO',
   tagline: 'Low code Python web framework',
-  url: 'https://your-docusaurus-test-site.com',
+  //! might need to change this to match test url?
+  url: 'https://pyweb.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -23,12 +24,12 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
+          // ! have commented these out for now to remove edit feature.
           //editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
+          // ! have commented these out for now to remove edit feature.
           //editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
@@ -54,7 +55,7 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/pywebio/PyWebIO/',
             label: 'GitHub',
