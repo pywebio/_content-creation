@@ -10,12 +10,14 @@ const config = {
   tagline: 'Low code Python web framework',
   //! might need to change this to match test url?
   url: 'https://pyweb.io',
-  baseUrl: '/',
+  baseUrl: '/PyWebIO-Docusaurus/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'pywebio', // Usually your GitHub org/user name.
-  projectName: 'pywebio', // Usually your repo name.
+  organizationName: 'JeffTerrell', // Usually your GitHub org/user name.
+  projectName: 'PyWebIO-Docusaurus', // Usually your repo name.
+  deploymentBranch: 'gh-pages',      
+  trailingSlash: true,               
 
   presets: [
     [
