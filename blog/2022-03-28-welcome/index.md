@@ -8,6 +8,9 @@ tags: [welcome]
 
 
 ### A great resource for articles, tutorials, and industry news focused on the PyWebIO framework!
+
+-------------------------------------------------------------------------------------------------
+
 Lets learn together!
 -----------------------
 ![PyWebIO Logo](../img/pywebio.png)
