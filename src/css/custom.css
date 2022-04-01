@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
 
 /**
  * Any CSS included here will be global. The classic template
@@ -9,32 +9,33 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #b1a374;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #4c3168;
+  --ifm-color-primary-dark: #442c5e;
+  --ifm-color-primary-darker: #412a58;
+  --ifm-color-primary-darkest: #352249;
+  --ifm-color-primary-light: #543672;
+  --ifm-color-primary-lighter: #573878;
+  --ifm-color-primary-lightest: #634087;
+  --ifm-background-color: #ebebeb;
   --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'Poppins';
+  --ifm-font-family-monospace: 'Ubuntu';
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #d3bc8d;
+  --ifm-color-primary-dark: #c9ad74;
+  --ifm-color-primary-darker: #c4a667;
+  --ifm-color-primary-darkest: #b28e45;
+  --ifm-color-primary-light: #ddcba6;
+  --ifm-color-primary-lighter: #e2d2b3;
+  --ifm-color-primary-lightest: #f0e9d9;
+  --ifm-background-color: #000000;
 }
 
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: url('https://fonts.googleapis.com/css2?family=Poppins&display=swap')
+[data-theme='light'] nav {
+  background-color: #ebebeb;
 }
 
 .docusaurus-highlight-code-line {
@@ -48,17 +49,10 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.navbar__title {
-  font-family: 'Rubik';
-  font-size: 32px;
-  font-weight: 900;
-}
-
 header.hero.hero--primary.heroBanner_src-pages-index-module {
   background-color: rgb(69, 216, 118);
 }
 
-h1.hero__title {
-  font-family: 'Rubik', serif;
-  color: black;
+[data-theme='light'] .footer {
+  background-image: linear-gradient(to right, #f5ebc4, #d3bc8d);
 }
