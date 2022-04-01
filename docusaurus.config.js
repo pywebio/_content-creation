@@ -1,9 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'PyWebIO',
@@ -16,8 +13,8 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'JeffTerrell', // Usually your GitHub org/user name.
   projectName: 'PyWebIO-Docusaurus', // Usually your repo name.
-  deploymentBranch: 'gh-pages',      
-  trailingSlash: true,               
+  deploymentBranch: 'gh-pages',
+  trailingSlash: true,
 
   presets: [
     [
@@ -26,6 +23,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/',
           // ! have commented these out for now to remove edit feature.
           //editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
@@ -48,7 +46,7 @@ const config = {
         title: 'PyWebIO',
         logo: {
           alt: 'PyWebIO logo',
-          src: 'img/pywebio.png',
+          src: 'img/pyweb_logo_192.png',
         },
         items: [
           {
@@ -66,14 +64,14 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
             title: 'Docs',
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/',
               },
             ],
           },
@@ -115,8 +113,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()}`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: require('prism-react-renderer/themes/github'),
+        darkTheme: require('prism-react-renderer/themes/dracula'),
       },
     }),
 };
