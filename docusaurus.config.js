@@ -11,7 +11,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'JeffTerrell', // Usually your GitHub org/user name.
+  organizationName: 'Corgibyte', // Usually your GitHub org/user name.
   projectName: 'PyWebIO-Docusaurus', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: true,
@@ -57,14 +57,40 @@ const config = {
           },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/pywebio/PyWebIO/',
-            label: 'GitHub',
+            className: 'mbri-github',
+            to: 'https://github.com/pywebio/PyWebIO/',
+            position: 'right',
+          },
+          {
+            to: 'https://github.com/pywebio/PyWebIO/',
+            label: 'Project Repo',
+            position: 'right',
+          },
+          {
+            className: 'mbri-hot-cup',
+            to: 'https://www.pyweb.io/product.html',
+            position: 'right',
+          },
+          {
+            to: 'https://www.pyweb.io/product.html',
+            label: 'Products and Services',
+            position: 'right',
+          },
+          {
+            className: 'mbri-help',
+            to: 'https://discord.gg/MvaCcg76Z7',
+            position: 'right',
+          },
+          {
+            className: 'button button--secondary',
+            to: 'https://discord.gg/MvaCcg76Z7',
+            label: 'Join Discord',
             position: 'right',
           },
         ],
       },
       footer: {
-        style: 'light',
+        style: 'dark',
         links: [
           {
             title: 'Docs',
