@@ -6,13 +6,13 @@ const config = {
   title: 'PyWebIO',
   tagline: 'Low code Python web framework',
   //! might need to change this to match test url?
-  url: 'https://pyweb.io',
+  url: 'https://corgibyte.github.io',
   baseUrl: '/PyWebIO-Docusaurus/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Corgibyte', // Usually your GitHub org/user name.
-  projectName: 'PyWebIO-Docusaurus', // Usually your repo name.
+  projectName: 'docu-test', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: true,
 
