@@ -39,4 +39,4 @@ jobs:
           git config --global user.email "hannah@corgibyte.com"
           git config --global user.name "Hannah Young"
           npm ci
-          npm run build
+          npm run deploy
