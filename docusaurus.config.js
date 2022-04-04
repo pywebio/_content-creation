@@ -7,7 +7,7 @@ const config = {
   tagline: 'Low code Python web framework',
   //! might need to change this to match test url?
   url: 'https://corgibyte.github.io',
-  baseUrl: '/PyWebIO-Docusaurus/docs/',
+  baseUrl: '/docu-test/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
