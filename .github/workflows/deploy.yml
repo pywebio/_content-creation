@@ -11,7 +11,7 @@ jobs:
     if: github.event_name != 'push'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
@@ -41,4 +41,4 @@ jobs:
           publish_dir: ./build
           destination_dir: docs
           user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'        
+          user_email: 'github-actions[bot]@users.noreply.github.com'
