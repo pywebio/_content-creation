@@ -19,7 +19,7 @@
   --ifm-color-primary-lightest: #634087;
   --ifm-background-color: #ebebeb;
   --ifm-code-font-size: 95%;
-  --ifm-font-family-base: 'Poppins';
+  --ifm-font-family-base: 'Poppins', sans-serif;
   --ifm-font-family-monospace: 'Ubuntu';
   --ifm-footer-background-color: #ebebeb;
 }
@@ -34,6 +34,13 @@
   --ifm-color-primary-lighter: #e2d2b3;
   --ifm-color-primary-lightest: #f0e9d9;
   --ifm-background-color: #000000;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  src: url('https://fonts.googleapis.com/css2?family=Poppins&display=swap')
 }
 
 [data-theme='light'] nav {
@@ -56,20 +63,56 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
 }
 
 /* Navbar */
-.mbri-hot-cup {
+.navbar__title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+.mbri-hot-cup::before {
   font-size: 1.6rem;
-  font-weight: 800;
-  margin-right: -15px;
 }
 
-.mbri-github {
+.mbri-hot-cup::after {
+  font-size: 1.0rem;
+  margin-left: .6rem;
+  font-family: 'Poppins', sans-serif;
+  content: "Products and Services";
+  position: relative;
+  bottom: .25rem;
+}
+
+.menu__link.mbri-hot-cup::after {
+  font-size: 1.1rem;
+  position: relative;
+  top: .25rem;
+}
+
+.mbri-github::before {
   font-size: 1.6rem;
-  margin-right: -15px;
+}
+
+.mbri-github::after {
+  font-size: 1.0rem;
+  font-weight: 600;
+  margin-left: .6rem;
+  font-family: 'Poppins', sans-serif;
+  content: "Project Repo";
+  position: relative;
+  bottom: .25rem;
+}
+
+.menu__link.mbri-github::after {
+  font-size: 1.1rem;
+  position: relative;
+  top: .25rem;
 }
 
 .mbri-help {
-  font-size: 1.6rem;
-  margin-right: -5px;
+  background-color: #b1a374;
+}
+
+.mbri-help:hover {
+  background-color: #8b7d4e;
 }
 
 .navbar__item.navbar__link {
@@ -84,6 +127,17 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
   font-weight: 500;
 }
 
+.navbar__item.navbar__link.button.button--primary {
+  background: #b1a374;
+  color: white;
+  border: none;
+}
+
+.navbar__item.navbar__link.button.button--primary:hover {
+  background: #8b7d4e;
+  color: white;
+  border: none;
+}
 
 /* footer */
 [data-theme='light'] .footer.footer--dark {
@@ -111,4 +165,8 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
+}
+
+.testing {
+  font-family: 'Poppings', sans-serif;
 }

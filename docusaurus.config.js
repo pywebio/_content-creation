@@ -46,7 +46,7 @@ const config = {
         title: 'PyWebIO',
         logo: {
           alt: 'PyWebIO logo',
-          src: 'img/pyweb_logo_192.png',
+          src: 'img/pywebio.png',
         },
         items: [
           {
@@ -62,29 +62,14 @@ const config = {
             position: 'right',
           },
           {
-            to: 'https://github.com/pywebio/PyWebIO/',
-            label: 'Project Repo',
-            position: 'right',
-          },
-          {
             className: 'mbri-hot-cup',
             to: 'https://www.pyweb.io/product.html',
             position: 'right',
           },
           {
-            to: 'https://www.pyweb.io/product.html',
-            label: 'Products and Services',
-            position: 'right',
-          },
-          {
-            className: 'mbri-help',
+            className: 'button button--primary',
             to: 'https://discord.gg/MvaCcg76Z7',
-            position: 'right',
-          },
-          {
-            className: 'button button--secondary',
-            to: 'https://discord.gg/MvaCcg76Z7',
-            label: 'Join Discord',
+            label: '💬 Join Discord',
             position: 'right',
           },
         ],
