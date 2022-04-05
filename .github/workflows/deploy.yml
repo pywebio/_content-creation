@@ -24,19 +24,38 @@ jobs:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      #! may not be necessary with deploy action destination_dir feature
+      # Checkout the 'main' website branch
+      # - uses: actions/checkout@v3
+      #   with:
+      #     ref: docu-test
+      # Install node
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
           cache: npm
-      - uses: webfactory/ssh-agent@v0.5.0
-        with:
-          ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
-      - name: Deploy to GitHub Pages
-        env:
-          USE_SSH: true
+      # ?Unsure if this is necessary with current script 
+      # Setup SSH deploy key from secrets
+      # - uses: webfactory/ssh-agent@v0.5.0
+      #   with:
+      #     ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
+      # Checkout the 'main' doc branch
+      - uses: actions/checkout@v3
+      # Install npm dependencies in doc and build static files
+      - name: Build docs
         run: |
-          git config --global user.email "hannah@corgibyte.com"
-          git config --global user.name "Hannah Young"
-          npm ci
-          npm run deploy
+        npm ci
+        npm run build
+      #! may not be necessary with deploy action destination_dir feature
+      # - name: Move static docs to main website
+      #   run: |
+      #   mv PyWebIO-Docusaurus/build docu-test/docs
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.GH_PAGES_DEPLOY }}
+          external_repository: corgibyte/docu-test
+          publish_dir: ./build
+          destination_dir: docs
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'        
