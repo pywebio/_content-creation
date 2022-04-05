@@ -44,8 +44,8 @@ jobs:
       # Install npm dependencies in doc and build static files
       - name: Build docs
         run: |
-        npm ci
-        npm run build
+          npm ci
+          npm run build
       #! may not be necessary with deploy action destination_dir feature
       # - name: Move static docs to main website
       #   run: |
