@@ -67,9 +67,8 @@ const config = {
             position: 'right',
           },
           {
-            className: 'button button--primary',
+            className: 'mbri-help',
             to: 'https://discord.gg/MvaCcg76Z7',
-            label: '💬 Join Discord',
             position: 'right',
           },
         ],

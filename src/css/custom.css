@@ -68,27 +68,12 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
   font-size: 2.1rem;
   font-weight: 700;
 }
-.mbri-hot-cup::before {
+
+.mbri-github::before { /* Icon */
   font-size: 1.6rem;
-}
-
-.mbri-hot-cup::after {
-  font-size: 1.0rem;
-  margin-left: .6rem;
-  font-family: 'Poppins', sans-serif;
-  content: "Products and Services";
+  font-weight: 500;
   position: relative;
-  bottom: .25rem;
-}
-
-.menu__link.mbri-hot-cup::after {
-  font-size: 1.1rem;
-  position: relative;
-  top: .25rem;
-}
-
-.mbri-github::before {
-  font-size: 1.6rem;
+  top:.115rem;
 }
 
 .mbri-github::after {
@@ -98,36 +83,78 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
   font-family: 'Poppins', sans-serif;
   content: "Project Repo";
   position: relative;
-  bottom: .25rem;
+  bottom: .2rem;
 }
 
 .menu__link.mbri-github::after {
   font-size: 1.1rem;
   position: relative;
-  top: .25rem;
+  top: .35rem;
+}
+
+.mbri-hot-cup::before {
+  font-size: 1.6rem;
+  font-weight: 500;
+  position: relative;
+  top: .115rem;
+}
+
+.mbri-hot-cup::after { /* Icon */
+  font-size: 1.0rem;
+  font-weight: 600;
+  margin-left: .6rem;
+  margin-right: 1rem;
+  font-family: 'Poppins', sans-serif;
+  content: "Products and Services";
+  position: relative;
+  bottom: .2rem;
+}
+
+.menu__link.mbri-hot-cup::after {
+  font-size: 1.1rem;
+  position: relative;
+  top: .35rem;
 }
 
 .mbri-help {
   background-color: #b1a374;
+  border-radius: 4px;
+  width: 200px;
+  height: 44px;
 }
 
 .mbri-help:hover {
   background-color: #8b7d4e;
 }
 
-.navbar__item.navbar__link {
+.mbri-help::before { /* Icon */
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  margin-right: .15rem;
+  position: relative;
+  top:.525rem;
+}
+
+.mbri-help::after {
+  color: white;
+  font-size: 1.0rem;
+  font-weight: 600;
+  margin-left: .7rem;
+  font-family: 'Poppins', sans-serif;
+  content: "Join Discord";
+  position: relative;
+  top: .15rem;
+}
+
+
+
+.navbar__item.navbar__link { /* Tutorial & Blog links */
   font-weight: 600;
 }
 
-.navbar__item.navbar__link.mbri-hot-cup::before {
-  font-weight: 500;
-}
-
-.navbar__item.navbar__link.mbri-github::before {
-  font-weight: 500;
-}
-
-.navbar__item.navbar__link.button.button--primary {
+/* .navbar__item.navbar__link.button.button--primary {
   background: #b1a374;
   color: white;
   border: none;
@@ -137,7 +164,7 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
   background: #8b7d4e;
   color: white;
   border: none;
-}
+} */
 
 /* footer */
 [data-theme='light'] .footer.footer--dark {
@@ -167,6 +194,6 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
   font-weight: 400;
 }
 
-.testing {
-  font-family: 'Poppings', sans-serif;
+img {
+  border-radius: 15px;
 }
