@@ -5,14 +5,13 @@
 const config = {
   title: 'PyWebIO',
   tagline: 'Low code Python web framework',
-  //! might need to change this to match test url?
   url: 'https://pyweb.io',
-  baseUrl: '/PyWebIO-Docusaurus/',
+  baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Corgibyte', // Usually your GitHub org/user name.
-  projectName: 'PyWebIO-Docusaurus', // Usually your repo name.
+  organizationName: 'pywebio', // Usually your GitHub org/user name.
+  projectName: 'content_creation', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: true,
 
@@ -93,11 +92,27 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Resources',
             items: [
               {
-                label: 'Tutorial',
-                to: '/',
+                label: 'Project Repo',
+                to: 'https://github.com/pywebio/PyWebIO/',
+              },
+              {
+                label: 'Documentation',
+                to: 'https://pywebio.readthedocs.io/',
+              },
+              {
+                label: 'Tutorials',
+                to: 'https://www.pyweb.io/tutorial.html',
+              },
+              {
+                label: 'Demos and source code',
+                to: 'https://github.com/pywebio/demos',
+              },
+              {
+                label: 'Bug Reports and fixes',
+                to: 'https://github.com/pywebio/PyWebIO/issues',
               },
             ],
           },
@@ -105,16 +120,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Discord',
+                label: 'Discord server',
                 href: 'https://discord.gg/MvaCcg76Z7',
               },
               {
-                label: 'Subscribe to newsletter',
-                href: 'https://TODO',
+                label: 'Subscribe to newsletters',
+                href: 'https://www.pyweb.io/index.html#header16-6',
               },
               {
                 label: 'Contact us',
-                href: 'https://TODO',
+                href: 'mailto:hey@pyweb.io',
               },
             ],
           },
@@ -123,15 +138,15 @@ const config = {
             items: [
               {
                 label: 'Library and collateral',
-                to: 'https://TODO',
+                to: 'https://www.pyweb.io/product.html#content4-3e',
               },
               {
                 label: 'Platform',
-                href: 'https://TODO',
+                href: 'https://www.pyweb.io/product.html#content4-3h',
               },
               {
                 label: 'Hire an expert',
-                href: 'https://TODO'
+                href: 'https://www.pyweb.io/product.html#header15-1s'
               }
             ],
           },
