@@ -37,7 +37,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.GH_PAGES_DEPLOY }}
-          external_repository: corgibyte/docu-test
+          external_repository: pywebio/pywebio.github.io
           publish_dir: ./build
           destination_dir: docs
           user_name: 'github-actions[bot]'
