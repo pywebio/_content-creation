@@ -1,4 +1,1 @@
-TODO:
-
-- Edit title bar with subtitle?
-- Clean up prop declarations
+# PyWeb.io/docs pages
