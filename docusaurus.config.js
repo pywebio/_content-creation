@@ -42,17 +42,17 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'PyWebIO',
+        title: 'PyWeb.io',
         logo: {
           alt: 'PyWebIO logo',
-          src: 'img/pyweb_logo_192.png',
+          src: 'img/pywebio.png',
         },
         items: [
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Tutorials',
           },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
@@ -61,29 +61,13 @@ const config = {
             position: 'right',
           },
           {
-            to: 'https://github.com/pywebio/PyWebIO/',
-            label: 'Project Repo',
-            position: 'right',
-          },
-          {
             className: 'mbri-hot-cup',
             to: 'https://www.pyweb.io/product.html',
             position: 'right',
           },
           {
-            to: 'https://www.pyweb.io/product.html',
-            label: 'Products and Services',
-            position: 'right',
-          },
-          {
             className: 'mbri-help',
             to: 'https://discord.gg/MvaCcg76Z7',
-            position: 'right',
-          },
-          {
-            className: 'button button--secondary',
-            to: 'https://discord.gg/MvaCcg76Z7',
-            label: 'Join Discord',
             position: 'right',
           },
         ],
