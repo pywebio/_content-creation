@@ -148,7 +148,17 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
   top: .15rem;
 }
 
+.menu__link.mbri-help::before {
+  font-size: 1.6rem;
+  position: relative;
+  top: -.001rem;
+}
 
+.menu__link.mbri-help::after {
+  font-size: 1.1rem;
+  position: relative;
+  top: .35rem;
+}
 
 .navbar__item.navbar__link { /* Tutorial & Blog links */
   font-weight: 600;
@@ -196,4 +206,15 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
 
 img {
   border-radius: 15px;
+}
+
+.tutorial_button {
+  background-color: #b1a374;
+  border-radius: 4px;
+  width: 200px;
+  height: 44px;
+}
+
+.tutorial_button:hover {
+  background-color: #8b7d4e;
 }

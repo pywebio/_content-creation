@@ -43,7 +43,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'PyWebIO',
+        title: 'PyWeb.io',
         logo: {
           alt: 'PyWebIO logo',
           src: 'img/pywebio.png',

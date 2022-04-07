@@ -1,7 +1,7 @@
 ---
 id: tutorial-template # unique document ID which is the name of the document (without the extension) relative to the root docs directory (eg: document or tutorials/document)
 sidebar_position: 1 # the position of the document in the left navbar (descending)
-slug: tutorial-template # slug is the file path to the blog post after /blog, should be unique to the post
+slug: tutorial-template # slug is the file path to the tutorial after /docs, should be unique to the document
 title: Tutorial Template # main heading that shows at the top of the tutorial
 authors:
   - name: Test Tester

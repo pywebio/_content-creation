@@ -1,0 +1,122 @@
+---
+id: submit-blog-post # unique document ID which is the name of the document (without the extension) relative to the root docs directory (eg: document or tutorials/document)
+sidebar_position: 1 # the position of the document in the left navbar (descending)
+slug: submit-blog-post # slug is the file path to the tutorial after /docs, should be unique to the document
+title: Send Me The Blog Post Testing # main heading that shows at the top of the tutorial
+authors: [terrell]
+---
+
+*Jeff Terrell, April 6, 2022*
+
+
+Submitting a blog post doesn't have to be difficult, and hopefully you'll find the process easy to get through. This tutorial will guide you through the blog creation process step by step resulting in a completed and fully deployed blog post. Let's dive in!
+
+## Base Step/Prerequisites/Requirements
+* GitHub account - [Create GitHub account](https://github.com/join)
+
+
+
+## Forking Content_Creation Directory
+Let's begin with forking the pywebio/content-creation repository which is where your blog post will eventually be pushed to and deployed from.
+
+![GitHub Fork Repository](./gh_fork_repository.JPG)
+
+Click the Fork button in the top of right of your screen. You will be redirected to the forked content_creation repository in your GitHub account.
+
+
+
+## Adding An Author
+Now that you have a clone of the content_creation repository, lets get you added as a contributing author. 
+
+![Docusaurus Add Author YAML](./gh_add_author.JPG)
+
+Navigate to the blog directory and click on the authors.yml file. Click the "pencil" icon in the top right to begin editing the file. Follow the format as shown above to create your author profile. Note, your last name should be used as the main property. This profile will be used later in the front matter field at the top of your blog post file (index.md).
+
+
+
+## Adding New Directory And Markdown File
+### Create a new directory and Markdown file
+
+![GitHub Create New File](./gh_create_new_file.JPG)
+
+Navigate to the blog directory of the repo, click the "Add File" button, and then select "Create new file". 
+
+In the input box replace "Name your file..." with the new directory and Markdown file for your blog post. The directory should be created with this path (content_creation/blog) and be named with the current date (yyyy-mm-dd). The file should be named index.md. Example:
+* content_creation/blog/2022-04-07/index.md
+
+### Commit the new directory and file
+
+![GitHub Propose New File](./gh_propose_new_file.JPG)
+
+Scroll to the bottom of the page and in the Commit new file box, select the "Create a new branch for this commit and start a pull request" option. This will give you the option to name the new branch you are creating. The branch should be named with the following format (blog-date-description). Example:
+* blog-2022-04-07-blog-tutorial
+
+Click the "Propose new file" button to create the new branch with your directory and file.
+
+
+
+## Creating The Blog Post
+
+![GitHub Select Branch](./gh_select_branch.JPG)
+
+After creating the new branch you will be re-directed to the Open a pull request screen. Don't do anything here, instead click on the content_creation repo link at the top of the page and switch from the main branch to the branch you just created by clicking the gray dropdown button (default is ![GitHub Octicon Branch](./gh_octicons_branch_resize.png) main) near the top of the page.
+
+Navigate to the newly created directory, select the index.md file and click the "pencil" icon on the right side of the screen to begin creating your blog post. To make this process easier, we have a template you can copy and paste to help get you started. [Click here to open a new window for the blog template.](https://github.com/pywebio/content_creation/tree/main/static/template/blog-template.md)
+
+![GitHub Copy Paste Blog Template](./gh_blog_template_paste.JPG)
+
+Your index.md file should look similar to the screenshot above after copying and pasting the template Markdown code.
+
+You can now begin creating your own blog post! Feel free to improvise and make it your own, the template is not the "law", be creative and have fun but try to follow the general layout of the template as well (thanks :smile:). Note, there is a preview tab next to the Edit file tab that allows you to see how your blog post will appear after being deployed.
+
+
+
+## Adding Images And Other Assets
+Of course you will likely want to add images or other assets to your blog post. All of the assets need to be saved in the directory containing the index.md file. 
+
+![GitHub Upload Files](./gh_upload_files.JPG)
+
+Make sure you are on the branch specific to your blog post and in the correct directory (blog/date-description), click the "Add file" button and select "Upload files". You will have the option to either drog and drop or choose the files from a file explorer. You can upload as many files as needed from this screen. After you are finished, ensure the ***"Needs edit: Commit directly to the 'your branch' branch"*** option is selected and click the "Commit changes" button.
+
+You will be directed to the home screen of the branch you just committed to, simply navigate back to the index.md file in the blog directory to continue editing your blog post. Also, because the uploaded assets reside in the same directory as your index.md file they are very easy to access. Simply use the following relative file path:
+* ./your_asset.jpg
+
+### Inserting Images
+![Python Image](./python-logo-master-v3.png)
+```
+![An Image](./your-image.jpg "Your Image")
+```
+Add an image by using the exclamation mark(!), followed by alt text in brackets, and the relative or URL to the image in parentheses(). A title can be added in quotation marks("") as well after the relative path or URL
+
+### Inserting YouTube Videos
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qeHQrNrDdeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+YouTube makes embedding a video very simple. From the YouTube video you want to insert, click on "Share" and then select "Embed". Choose the checkbox options you desire and then copy the code. Next, paste the code in your file and voila.
+
+### Inserting Code Snippets
+Code snippets allow users to quickly copy code with the click of a single button.
+```js
+<button onClick={() => alert('button clicked!')}>Click me!</button>
+```
+<button class="tutorial_button" onClick={() => alert('button clicked!')}>Click me!</button><br></br><br></br>
+
+
+Wrap your code in three backticks ``` to use a code snippet. Here's the source code from the code snippet show above.
+![Markdown Code Snippet](./code_snippet_example.jpg)
+
+
+
+## Submitting Blog Post
+After you have completed your blog and are satisfied with the end result it's time to submit your branch so that it can be merged with main branch and deployed to the web. Remember earlier when we skipped creating a pull request after creating the new branch? We are going to create the pull request now so the overlords of the PyWebIO blog know about your completed blog post. To do this, navigate to the home page of your branch and you will see a yellowish box with a green "Compare & pull request" button.
+
+![GitHub Create Pull Request](./gh_create_pull_request.JPG)
+
+Click the button and on the next page choose a reviewer. This will notify the person that there is a pull request for your blog request. Next click the "Create pull request" button and that's it, you're done! A PyWebIO team member will review your pull request and assuming everything looks good, your blog post will be deployed to the PyWebIO blog.
+
+![GitHub Create Pull Request Final](./gh_create_pull_request_final.JPG)
+
+
+## Conclusion
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus vehicula augue at tincidunt. Duis et lorem dictum, gravida ante et, fermentum augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In rutrum vitae velit et auctor. Donec at ultrices est. Morbi in eros rutrum, sagittis massa vel, maximus quam. Suspendisse potenti.
+

@@ -2,12 +2,7 @@
 slug: blog-template  # slug is the file path to the blog post after /blog, should be unique to the post
 title: Blog Template # H1 main heading that shows at the top of the blog post
 description: A blog post template # A short description of the blog post, does not show on page, for SEO
-# authors: [terrell, young] # authors can be added from authors.yml file (repeated use) or added for each blog post as shown below. Must only use one method
-authors:
-  - name: Test Tester
-    title: Creator of Testing.com
-    url: http://testing.com
-    image_url: https://github.com/testing.png
+authors: [terrell] # authors can be added from authors.yml file (repeated use) or added for each blog post as shown below. Must only use one method
 tags: [PyWebIO, blog, template] # Change to reflect blog content, tags will show at the bottom of the blog post
 keywords: [keywords, SEO] # For SEO
 ---
