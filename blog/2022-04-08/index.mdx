@@ -1,0 +1,100 @@
+## Setting up Docusaurus and GitHub Actions as a Content Management System to an Existing GitHug Pages Website
+
+### Problem:
+
+We wanted to add Docusaurus powered blog and tutorial sections to the existing PyWebIO website hosted on GitHub Pages. Docusaurus has excellent documentation on deploying to GitHub Pages. However, we already had an existing GitHub repository containing the code and GitHub Pages for the rest of our website. We wanted to add our Docusaurus generated static files to this deployment without disrupting the existing structure.
+
+### Solution
+
+Our solution was to use Docusaurus to transform Markdown content files into static HTML files, and GitHub Actions to automatically build those files and deploy them files to our separate GitHub Pages repository.
+
+#### Setup
+
+You will need:
+
+1. A [Docusaurus](https://docusaurus.io/) source code repository (documentation repo).
+    * Follow [Docusaurus' instructions](https://docusaurus.io/docs) for getting started in setting up a project.
+    * Push this Docusaurus project to your documentation repository on [GitHub](https://github.com/).
+2. A GitHub repository with a branch setup for [GitHub Pages](https://pages.github.com/) (GH Pages repo).
+
+##### Setup SSH Key
+
+1. Generate a new SSH key using [GitHub's instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). Do **not** add a passphrase. There is no need to add the key to your ssh-agent.
+2. Go to your GH Pages repo on GitHub's website. Select the `Settings` tab. Then select `Deploy keys` from the sidebar on the left. 
+3. Select `Add deploy key`. Add a title for the deploy key, and then paste the contents of the public SSH key (file ending with `.pub`) into the `Key` field. 
+4. Be sure to select `Allow write access` and then select `Add key`.
+5. Go to your documentation repo on GitHub's website. Select the `Settings` tab. In the sidebar to the left select `Secrets`, followed by `Actions`.
+6. Select `New repository secret`. Select an [appropriate name](https://docs.github.com/en/actions/security-guides/encrypted-secrets#naming-your-secrets) for your secret. 
+7. Paste the contents of the private SSH key file (should begin with `-----BEGIN OPENSSH PRIVATE KEY-----`) into the `Value` field, and then select `Add secret`.
+
+##### Setup GitHub Actions Workflow
+
+1. In your documentation repo create a [workflow file](https://docs.github.com/en/actions/using-workflows#creating-a-workflow-file) in `.github/workflows/`. We used `deploy.yml`.
+2. Our workflow file has two triggers: either a pull request or push to the `main` branch:
+
+```
+name: Deploy to GitHub Pages
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+```
+
+3. Our first job will run when there is a pull request to `main` and will checkout the source, install NPM and then generate static files from our documentation source to ensure there are no build errors:
+
+```
+jobs:
+  test-deploy:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Test build website
+        run: npm run build
+```
+
+4. Our second job will run when there is a push to `main`. It will also checkout the source, install NPM, and generate static files. It will then deploy those static files to our GH Pages repo:
+
+```
+deploy:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: npm
+      - name: Install dependencies and build
+        run: npm ci
+      - name: Test build website
+        run: npm run build
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.GH_PAGES_DEPLOY }}    #Be sure to select the name used for your secret
+          external_repository: pywebio/pywebio.github.io    # GH Pages repo
+          publish_dir: ./build
+          publish_branch: main    # Branch in GH Pages repo set to be Source for GitHub Pages
+          destination_dir: docs   # Directory to indicate path for your documentation from base URL. Ours will be pyweb.io/docs
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+```
+
+Please note comments on important values. Full script visible [here](https://gist.github.com/Corgibyte/9da8da9cf61b788c57a5ab23a92245cb).
+
+##### Setup Docusaurus Configuration
+
+Because we are placing our documentation static files nested in a path of the rest of our static webpage, it is important to update our `docusaurus.config.js` file in our documentation source. Change the `baseUrl` field to match the `destination_dir` selected in the workflow file's `actions-gh-pages@v3` step. For example, ours is `/docs/`.
+
+### Conclusion
+
+You should now be able to create content files for Docusaurus and have them auto-deploy once they are merged with your documentation source repository's `main` branch.
