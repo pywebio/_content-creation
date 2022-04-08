@@ -92,14 +92,14 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
   top: .35rem;
 }
 
-.mbri-hot-cup::before {
+.mbri-hot-cup::before { /* Icon */
   font-size: 1.6rem;
   font-weight: 500;
   position: relative;
   top: .115rem;
 }
 
-.mbri-hot-cup::after { /* Icon */
+.mbri-hot-cup::after {
   font-size: 1.0rem;
   font-weight: 600;
   margin-left: .6rem;
@@ -116,7 +116,7 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
   top: .35rem;
 }
 
-.mbri-help {
+.mbri-help { /* button */
   background-color: #b1a374;
   border-radius: 4px;
   width: 200px;
@@ -148,10 +148,10 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
   top: .15rem;
 }
 
-.menu__link.mbri-help::before {
+.menu__link.mbri-help::before { /* Icon */
   font-size: 1.6rem;
   position: relative;
-  top: -.001rem;
+  top: .2rem;
 }
 
 .menu__link.mbri-help::after {
@@ -163,18 +163,6 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
 .navbar__item.navbar__link { /* Tutorial & Blog links */
   font-weight: 600;
 }
-
-/* .navbar__item.navbar__link.button.button--primary {
-  background: #b1a374;
-  color: white;
-  border: none;
-}
-
-.navbar__item.navbar__link.button.button--primary:hover {
-  background: #8b7d4e;
-  color: white;
-  border: none;
-} */
 
 /* footer */
 [data-theme='light'] .footer.footer--dark {
@@ -218,3 +206,15 @@ img {
 .tutorial_button:hover {
   background-color: #8b7d4e;
 }
+
+/* .navbar__item.navbar__link.button.button--primary {
+  background: #b1a374;
+  color: white;
+  border: none;
+}
+
+.navbar__item.navbar__link.button.button--primary:hover {
+  background: #8b7d4e;
+  color: white;
+  border: none;
+} */
