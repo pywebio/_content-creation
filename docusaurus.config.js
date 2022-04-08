@@ -6,7 +6,7 @@ const config = {
   title: 'PyWebIO',
   tagline: 'Low code Python web framework',
   url: 'https://pyweb.io',
-  baseUrl: '/blog/',
+  baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
