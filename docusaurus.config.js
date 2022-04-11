@@ -55,7 +55,7 @@ const config = {
             position: 'left',
             label: 'Tutorials',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          { to: '/', label: 'Blog', position: 'left' },
           {
             className: 'mbri-github',
             to: 'https://github.com/pywebio/PyWebIO/',
