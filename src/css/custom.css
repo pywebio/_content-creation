@@ -89,7 +89,7 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
 .menu__link.mbri-github::after {
   font-size: 1.1rem;
   position: relative;
-  top: .35rem;
+  top: .5rem;
 }
 
 .mbri-hot-cup::before { /* Icon */
@@ -113,7 +113,7 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
 .menu__link.mbri-hot-cup::after {
   font-size: 1.1rem;
   position: relative;
-  top: .35rem;
+  top: .5rem;
 }
 
 .mbri-help { /* button */
