@@ -10,7 +10,7 @@ title: Send Me The Blog Post or Tutorial # main heading that shows at the top of
 This tutorial will guide you through the blog and tutorial creation process for PyWebIO. Let's dive in!
 
 ## Base Step/Prerequisites/Requirements
-* GitHub account - [Create GitHub account](https://github.com/join)
+* GitHub account - [Don't have an account?](https://github.com/join)
 
 
 
@@ -35,7 +35,7 @@ Navigate to the blog directory and click on the authors.yml file. Click the "pen
 
 ![GitHub Create New File](./gh_create_new_file.JPG)
 
-Navigate to the blog directory of the repo, click the "Add File" button, and then select "Create new file". 
+Navigate to the blog or docs (for tutorials) directory of the repo, click the "Add File" button, and then select "Create new file". 
 
 In the input box replace "Name your file..." with the new directory and Markdown file for your blog post or tutorial. The directory and file should be created as shown below:
 * Blog Post (format: content_creation/blog/date-description/index.mdx )
@@ -45,9 +45,9 @@ In the input box replace "Name your file..." with the new directory and Markdown
 
 #### Creating Tutorial Category (only for tutorial, if needed)
 From the docs directory, click the "Add File" button, and then select "Create new file". Create the category as shown below:
-* ```content_creation/docs/newcategory/description/index.mdx```
+* ```content_creation/docs/category/description/index.mdx```
 
-Next, create a Json file which is used to give the category a title and order position in the left navbar. The Json file belongs in the category directory and must be created exactly as shown below:
+Next, create a Json file which is used to give the category a title and order position (ascending) in the left navbar. The Json file belongs in the category directory and must be created exactly as shown below:
 * ```_category_.json```
 
 Finally, inside of curly braces {}, add two fields, lable and position to the Json file.
@@ -65,10 +65,10 @@ Finally, inside of curly braces {}, add two fields, lable and position to the Js
 At the bottom of the page: 
 * select the "Create a new branch for this commit and start a pull request" option. 
 * Name the branch with the following format:
-  * For a blog post
-    * ```blog-2022-04-07-description```
-  * For a tutorial  
-    * ```tutorial-2022-04-07-description```
+  * For a blog post (blog-date-description)
+    * ```blog-2022-04-07-pyweb-release1.0```
+  * For a tutorial (tutorial-date-description)  
+    * ```tutorial-2022-04-07-mongoDB```
 * Click the "Propose new file" button to create the new branch with your directory and file.
 
 
@@ -77,14 +77,14 @@ At the bottom of the page:
 
 ![GitHub Select Branch](./gh_select_branch.JPG)
 
-After creating the new branch you will be re-directed to the Open a pull request screen. Don't do anything here, instead click on the content_creation repo link at the top of the page and switch from the main branch to the branch you just created.
+After creating the new branch you will be re-directed to the "Open a pull request" screen. Don't do anything here, instead click on the content_creation repo link at the top of the page and switch from the main branch to the branch you just created.
 
-Navigate to the newly created directory, select the index.mdx file and click the "pencil" icon on the right side of the screen to begin creating your blog post. To make this process easier, we have a template you can copy and paste to help get you started. 
+Navigate to the newly created directory, select the index.mdx file and click the "pencil" icon on the right side of the screen to begin creating your blog post or tutorial. To make this process easier, we have a template you can copy and paste to help get you started. 
 * [Blog post template](https://github.com/pywebio/content_creation/tree/main/static/template/blog-template.md) 
 
 * [Tutorial template](https://github.com/pywebio/content_creation/tree/main/static/template/tutorial-template.md)
 
-To copy the template, click the "Raw" button on the right side of the screen, highlight and copy the entire document.
+To copy the template, click the "Raw" button on the right side of the screen, and highlight and copy the entire document.
 
 ![GitHub Copy Paste Blog Template](./gh_blog_template_paste.JPG)
 
@@ -104,7 +104,7 @@ You can now begin creating your own blog post! Feel free to improvise and make i
   * ***sidebar_position:*** the position of the document in the left navbar (descending)
   * ***title:*** the H1 main heading of the blog post.
 
-Also note, there is a "Preview" tab next to the "Edit file" tab that allows you to see how your blog post will appear after being deployed.
+Also note, there is a "Preview" tab next to the "Edit file" tab that allows you to see how your document will appear after being deployed.
 
 
 
@@ -115,7 +115,7 @@ All assets need to be saved in the directory containing the index.mdx file.
 
 From your branch, click the "Add file" button and select "Upload files". You will have the option to either drog and drop or choose the files from a file explorer. You can upload as many files as needed from this screen. After you are finished, ensure the "Commit directly to the ```blog-date-description``` branch" option is selected and click the "Commit changes" button.
 
-You will be directed to the home screen of the branch you just committed to, navigate back to the index.mdx file in the blog directory to continue editing your blog post. Also, because the uploaded assets reside in the same directory as your index.mdx file they are very easy to access. Simply use the following relative file path:
+You will be re-directed to the home screen of the branch you just committed to, navigate back to the index.mdx file in the blog or docs(tutorials) directory to continue editing. To add the uploaded assets to your document, use the following relative file path:
 * ```./your_asset.jpg```
 
 ### Inserting Images
@@ -123,11 +123,17 @@ You will be directed to the home screen of the branch you just committed to, nav
 ```
 ![An Image](./your-image.jpg "Your Image")
 ```
-Add an image by using the exclamation mark(!), followed by alt text in brackets[], and the relative path or URL to the image in parenthesis(). A title (shows on hover) can be added in quotation marks("") as well after the relative path or URL.
+Add an image by using the exclamation mark(!), followed by alt text in brackets[], and the relative path or URL to the image in parenthesis(). A title can be added in quotation marks("") as well after the relative path or URL.
 
 ### Inserting YouTube Videos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qeHQrNrDdeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+```
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qeHQrNrDdeg" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
 
 From the YouTube video you want to insert, click on "Share" and then select "Embed". Choose the checkbox options you desire and then copy and paste the code into your file.
 
@@ -151,7 +157,7 @@ Navigate to the home page of your branch and click the green "Compare & pull req
 
 ![GitHub Create Pull Request Final](./gh_create_pull_request_final.JPG)
 
-You will be taken to the "Open a pull request" screen where you can choose to add a reviewer by clicking the gear⚙️ icon next to "Reviewers". Select a reviewer and click the "Create pull request" button and that's it, you're done! A PyWebIO team member will review your pull request and assuming everything looks good, your blog post will be deployed to the PyWebIO blog.
+You will be taken to the "Open a pull request" screen where you can choose to add a reviewer by clicking the gear⚙️ icon next to "Reviewers". Select a reviewer and click the "Create pull request" button and that's it, you're done! A PyWebIO team member will review your pull request and assuming everything looks good, your blog post or tutorial will be deployed.
 
 
 
