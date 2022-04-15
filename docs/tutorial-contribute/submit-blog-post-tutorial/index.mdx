@@ -2,12 +2,16 @@
 id: submit-blog-post # unique document ID which is the name of the document (without the extension) relative to the root docs directory (e.g., document or tutorials/document)
 sidebar_position: 1 # the position of the document in the left navbar (descending)
 title: Send Me The Blog Post or Tutorial # main heading that shows at the top of the tutorial
+description: Tutorial about submitting a blog post or tutorial to PyWebIO # include a short description of the blog post. This will not be visible anywhere on the page and is for SEO purposes.
+image: /img/blog/pyweb_contribute_tutorial.png # adds a meta image for social summary cards on Discord, Twitter, etc. Relative path must be: /img/tutorial/yourimage.jpg. Upload image to: /static/img/tutorial
+keywords: [PyWebIO, tutorial, blog] # include several keywords describing the main topics of the blog post for SEO purposes.
+tags: [PyWebIO, blog, template] # Change to reflect blog content, tags will show at the bottom of the blog post
 ---
 
 *Jeff Terrell, April 6, 2022*
 
 
-This tutorial will guide you through the blog and tutorial creation process for PyWebIO. Let's dive in!
+This tutorial will guide you through the blog and tutorial creation process for PyWeb.io. Let's dive in!
 
 ## Base Step/Prerequisites/Requirements
 * GitHub account - [Don't have an account?](https://github.com/join)
@@ -47,7 +51,7 @@ In the input box replace "Name your file..." with the new directory and Markdown
 From the docs directory, click the "Add File" button, and then select "Create new file". Create the category as shown below:
 * ```content_creation/docs/category/description/index.mdx```
 
-Next, create a Json file which is used to give the category a title and order position (ascending) in the left navbar. The Json file belongs in the category directory and must be created exactly as shown below:
+Next, create a Json file that is used to give the category a title and order position (ascending) in the left navbar. The Json file belongs in the category directory and must be created exactly as shown below:
 * ```_category_.json```
 
 Finally, inside of curly braces {}, add two fields, lable and position to the Json file.
@@ -63,7 +67,7 @@ Finally, inside of curly braces {}, add two fields, lable and position to the Js
 ![GitHub Propose New File](./gh_propose_new_file.JPG)
 
 At the bottom of the page: 
-* select the "Create a new branch for this commit and start a pull request" option. 
+* Select the "Create a new branch for this commit and start a pull request" option. 
 * Name the branch with the following format:
   * For a blog post (blog-date-description)
     * ```blog-2022-04-07-pyweb-release1.0```
@@ -90,11 +94,20 @@ To copy the template, click the "Raw" button on the right side of the screen, an
 
 Your index.mdx file should look similar to the screenshot above after copying and pasting the template Markdown code.
 
-You can now begin creating your own blog post! Feel free to improvise and make it your own, the template is not the "law", be creative and have fun, but try to follow the general layout of the template as well (thanks :smile:). At the top of file in between the three dashes is the front matter which contains fields that need to be changed for each blog post or tutorial.
+You can now begin creating your own blog post! Feel free to improvise and make it your own, the template is not the "law", be creative and have fun, but try to follow the general layout of the template as well (thanks :smile:). At the top of file in between the three dashes is the front matter which contains fields (metadata) that need to be changed for each blog post or tutorial.
+
+
+## Adding Metadata
+
+![Discord Card](./discord_card.JPG)
+
+Follow the steps below to ensure your file contains valuable metadata and social card components are displayed correctly.
+
 * **Needed for blog post**
   * ***slug:*** the file path to the blog post after /blog/date-description and should be unique to the document. Choose a short name, can be identical to the description used for the directory (e.g., pyweb-release-1.0).
   * ***title:*** the H1 main heading of the blog post.
   * ***description:*** include a short description of the blog post. This will not be visible anywhere on the page and is for SEO purposes.
+  * ***image:*** adds a meta image for social summary cards on Discord, Twitter, etc. Relative path must be: ```/img/blog/yourimage.jpg```. Upload image to: ```/static/img/blog```.
   * ***authors:*** this is where you add your author profile that was set up earlier.
   * ***tags:*** include several tags relevent to the subject matter of your post to make finding similar content easier for other readers.
   * ***keywords:*** include several keywords describing the main topics of the blog post for SEO purposes.
@@ -103,8 +116,10 @@ You can now begin creating your own blog post! Feel free to improvise and make i
   * ***id:*** unique document ID which is the name of the document (without the extension) relative to the root docs directory (e.g., document or tutorials/document)
   * ***sidebar_position:*** the position of the document in the left navbar (descending)
   * ***title:*** the H1 main heading of the blog post.
-
-Also note, there is a "Preview" tab next to the "Edit file" tab that allows you to see how your document will appear after being deployed.
+  * ***description:*** include a short description of the blog post. This will not be visible anywhere on the page and is for SEO purposes.
+  * ***image:*** adds a meta image for social summary cards on Discord, Twitter, etc. Upload image to: ```/static/img/tutorial```. Relative path must be: ```/img/tutorial/yourimage.jpg```.
+  * ***tags:*** include several tags relevent to the subject matter of your post to make finding similar content easier for other readers.
+  * ***keywords:*** include several keywords describing the main topics of the blog post for SEO purposes.
 
 
 
