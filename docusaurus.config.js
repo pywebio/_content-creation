@@ -22,12 +22,13 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/',
+          // routeBasePath: '/',
           // ! have commented these out for now to remove edit feature.
           //editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
+          routeBasePath: '/',
           // ! have commented these out for now to remove edit feature.
           //editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
@@ -54,7 +55,7 @@ const config = {
             position: 'left',
             label: 'Tutorials',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          { to: '/', label: 'Blog', position: 'left' },
           {
             className: 'mbri-github',
             to: 'https://github.com/pywebio/PyWebIO/',
@@ -105,15 +106,15 @@ const config = {
             items: [
               {
                 label: 'Discord server',
-                href: 'https://discord.gg/MvaCcg76Z7',
+                to: 'https://discord.gg/MvaCcg76Z7',
               },
               {
                 label: 'Subscribe to newsletters',
-                href: 'https://www.pyweb.io/index.html#header16-6',
+                to: 'https://www.pyweb.io/index.html#header16-6',
               },
               {
                 label: 'Contact us',
-                href: 'mailto:hey@pyweb.io',
+                to: 'mailto:hey@pyweb.io',
               },
             ],
           },
@@ -126,11 +127,11 @@ const config = {
               },
               {
                 label: 'Platform',
-                href: 'https://www.pyweb.io/product.html#content4-3h',
+                to: 'https://www.pyweb.io/product.html#content4-3h',
               },
               {
                 label: 'Hire an expert',
-                href: 'https://www.pyweb.io/product.html#header15-1s'
+                to: 'https://www.pyweb.io/product.html#header15-1s'
               }
             ],
           },
