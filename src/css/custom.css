@@ -17,7 +17,7 @@
   --ifm-color-primary-light: #543672;
   --ifm-color-primary-lighter: #573878;
   --ifm-color-primary-lightest: #634087;
-  --ifm-background-color: #ebebeb;
+  --ifm-background-color: #88aef7b9;
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'Poppins', sans-serif;
   --ifm-font-family-monospace: 'Ubuntu';
@@ -207,14 +207,6 @@ img {
   background-color: #8b7d4e;
 }
 
-/* .navbar__item.navbar__link.button.button--primary {
-  background: #b1a374;
-  color: white;
-  border: none;
+.testing {
+  background-color: #412a58;
 }
-
-.navbar__item.navbar__link.button.button--primary:hover {
-  background: #8b7d4e;
-  color: white;
-  border: none;
-} */
