@@ -207,6 +207,33 @@ img {
   background-color: #8b7d4e;
 }
 
+.testing {
+  background-color: #412a58;
+}
+
+/* details {
+  background-color: #e9c7ffab;
+}
+
+details > summary {
+  font: 100px;
+  background-color: #9b9b9b33;
+  color: #412a58;
+}
+
+details[open] > summary {
+  background-color: rgb(15, 15, 216);
+}
+
+details > p {
+  border-radius: 0 0 10px 10px;
+  background-color: #8b7d4e;
+  padding: 2px 6px;
+  margin: 0;
+  box-shadow: 3px 3px 4px black;
+} */
+
+
 /* .navbar__item.navbar__link.button.button--primary {
   background: #b1a374;
   color: white;

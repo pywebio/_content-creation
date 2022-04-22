@@ -29,6 +29,7 @@ const config = {
         blog: {
           showReadingTime: true,
           routeBasePath: '/',
+          blogSidebarCount: 10,
           // ! have commented these out for now to remove edit feature.
           //editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
@@ -53,7 +54,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorials',
+            label: 'Docs',
           },
           { to: '/', label: 'Blog', position: 'left' },
           {
