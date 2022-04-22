@@ -130,7 +130,20 @@ Take note of the comments on important values. Full script visible [here](https:
 
 Because the documentation static files are nested in a path of the rest of the existing static webpage, it is important to update the `docusaurus.config.js` file in the documentation source. Change the `baseUrl` field to match the `destination_dir` selected in the workflow file's `actions-gh-pages@v3` step. For example: `/docs/`.
 
-![Docusaurus config file](./docusaurus_config.JPG)
+```
+const config = {
+  title: 'PyWebIO',
+  tagline: 'Low code Python web framework',
+  url: 'https://pyweb.io',
+  baseUrl: '/docs/',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+  favicon: 'img/favicon.ico',
+  organizationName: 'pywebio', // Usually your GitHub org/user name.
+  projectName: 'content_creation', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
+  trailingSlash: true,
+```
 
 ## Conclusion
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
