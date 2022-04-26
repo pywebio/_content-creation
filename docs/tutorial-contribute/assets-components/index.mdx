@@ -81,31 +81,31 @@ Wrap your code in three backticks ``` to use a code snippet. Here's the source c
 
 :::note Your Title
 
-Your **important** content
+Your **important** content (note)
 
 :::
 
 :::tip Your Title
 
-Your **important** content
+Your **important** content (tip)
 
 :::
 
 :::info Your Title
 
-Your **important** content
+Your **important** content (info)
 
 :::
 
 :::caution Your Title
 
-Your **important** content
+Your **important** content (caution)
 
 :::
 
 :::danger Your Title
 
-Your **important** content
+Your **important** content (danger)
 
 :::
 
@@ -136,7 +136,12 @@ Your **important** content
   </TabItem>
 </Tabs>
 
-To insert tabs, you must first import the tab components in your file wrap your content in the `<Tabs>` component. For more information on customizing tabs, check out this [documentation](https://docusaurus.io/docs/markdown-features/tabs).
+To insert tabs, you must first import the tab components in your file (directly under the front matter) and then wrap your content in the `<Tabs>` component. For more information on customizing tabs, check out this [documentation](https://docusaurus.io/docs/markdown-features/tabs).
+
+```
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+```
 
 ```
 <Tabs>
@@ -167,7 +172,7 @@ To insert tabs, you must first import the tab components in your file wrap your 
   </details>  
 </details>
 
-Details drop-down boxes provide a clean look to grab a reader's attention. 
+Details drop-down boxes provide a clean look for displaying information. 
 
 ```
 <details>
