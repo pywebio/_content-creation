@@ -48,6 +48,8 @@ const config = {
         logo: {
           alt: 'PyWebIO logo',
           src: 'img/pywebio.png',
+          href: 'https://www.pyweb.io',
+          target: '_self',
         },
         items: [
           {
