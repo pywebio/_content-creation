@@ -17,7 +17,7 @@
   --ifm-color-primary-light: #543672;
   --ifm-color-primary-lighter: #573878;
   --ifm-color-primary-lightest: #634087;
-  --ifm-background-color: #ebebeb;
+  --ifm-background-color: #ebebeb; /* main backround color light mode */
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'Poppins', sans-serif;
   --ifm-font-family-monospace: 'Ubuntu';
@@ -33,7 +33,7 @@
   --ifm-color-primary-light: #ddcba6;
   --ifm-color-primary-lighter: #e2d2b3;
   --ifm-color-primary-lightest: #f0e9d9;
-  --ifm-background-color: #000000;
+  --ifm-background-color: #000000; /* main background color dark mode */
 }
 
 @font-face {
@@ -43,6 +43,7 @@
   src: url('https://fonts.googleapis.com/css2?family=Poppins&display=swap')
 }
 
+/* background */
 [data-theme='light'] nav {
   background-color: #ebebeb;
 }
@@ -195,4 +196,9 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
 /* images (global) */
 img {
   border-radius: 15px;
+}
+
+/* font size (global) */
+p, li {
+  font-size: 15px;
 }
