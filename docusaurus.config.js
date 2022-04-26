@@ -22,13 +22,13 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // routeBasePath: '/',
+          routeBasePath: '/',
           // ! have commented these out for now to remove edit feature.
           //editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
-          routeBasePath: '/',
+          // routeBasePath: '/',
           blogSidebarCount: 10,
           // ! have commented these out for now to remove edit feature.
           //editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
@@ -56,7 +56,7 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          { to: '/', label: 'Blog', position: 'left' },
+          { to: '/blog/', label: 'Blog', position: 'left' },
           {
             className: 'mbri-github',
             to: 'https://github.com/pywebio/PyWebIO/',
