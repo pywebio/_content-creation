@@ -3,13 +3,10 @@ id: getting-started-hello-world
 sidebar_position: 1
 title: Getting Started With PyWeb Builder (Hello World)
 description: Tutorial about building a basic web app with PyWeb builder
-image: /img/tutorial/pywebio.png
+image: /img/tutorial/pywebio_builder_project.JPG
 keywords: [PyWeb Builder, PyWeb.io, tutorial, hello world]
 tags: [PyWeb Builder, beginner, tutorial]
 ---
-
-
--apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 export const Button = ({children, backgroundColor, fontColor, borderStyle, borderColor}) => (
   <span
@@ -31,9 +28,6 @@ export const Button = ({children, backgroundColor, fontColor, borderStyle, borde
     {children}
   </span>    
 )
-
-<Button backgroundColor='#0f9d58' fontColor='white'>Save & Run</Button>
-<Button backgroundColor='white' borderStyle='solid' borderColor='blue'>➢ Launch</Button>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
@@ -85,41 +79,41 @@ Click the <Button backgroundColor='#0f9d58' fontColor='white'>Create ›</Button
 After creating the project, you will be brought to the App Builder page which consists of two main sections, a code editor on the left and web preview window on the right.
 :::tip Note
 
-Click the <Button backgroundColor='#0f9d58' fontColor='white'>Save & Run</Button> button to replace the 502 Bad Gateway message and display the welcome.py app in the web preview window
+Click the <Button backgroundColor='#0f9d58' fontColor='white'>Save & Run</Button> button to replace the 502 Bad Gateway message and display the `welcome.py` app in the web preview window
 
 :::
 
 ### Create New .py File
 
-Before building your first web app, follow the steps below to create a new .py file in your Hello World project.
+Before building your first web app, follow the steps below to create a new `.py` file in your Hello World project.
 
-  1. Click the open folder 🗁 icon to the left of the green "Save & Run" button
+  1. Click the open folder 🗁 icon to the left of the green <Button backgroundColor='#0f9d58' fontColor='white'>Save & Run</Button> button to access the project's file manager
   2. Click the + plus document 🗋 icon on the right
   3. Type `hello-world.py` in the input box and hit your "enter" key
   4. Click the `hello-world.py` file
 
 ![PyWeb.io add new file](./pywebio_builder_add_new_file.JPG)
 
-You will now be brought back to the app builder screen with the hello-world.py file ready for editing.  
+You will now be brought back to the app builder screen with the `hello-world.py` file ready for editing.  
 
 ### Add "Hello, world!" Code
 
 ![PyWeb.io new file code editor](./pywebio_builder_no_code.JPG)
 
 Before adding any code, lets take a look at PyWeb.io's two main modules to better understand the functions used to build the Hello World app.
-* **pywebio.input** - This module provides functions to get all kinds of input from a user. Checkout the [PyWeb.io official documentation](https://pywebio.readthedocs.io/en/latest/input.html#) for more details and a full list of input() functions.
-* **pywebio.output** - This module provides functions that output many kinds of content to the user's browser. Checkout the [PyWeb.io official documentaion](https://pywebio.readthedocs.io/en/latest/output.html) for more details and a full list of output() functions.
+* **pywebio.input** - This module provides functions to get all kinds of input from a user. Checkout the [**PyWeb.io official documentation**](https://pywebio.readthedocs.io/en/latest/input.html#) for more details and a full list of input() functions.
+* **pywebio.output** - This module provides functions that output many kinds of content to the user's browser. Checkout the [**PyWeb.io official documentaion**](https://pywebio.readthedocs.io/en/latest/output.html) for more details and a full list of output() functions.
 
 :::tip Note
 
-Upon creating a new .py file, both of these modules are imported automatically with all* of their functions available
+Upon creating a new `.py` file, both of these modules are imported automatically with all* of their functions available
 
 :::
 
 
 ![PyWeb.io hello world code](./pywebio_builder_hello_world_code2.JPG)
 
-Every .py app file must include a `main()` function to run. Running a .py file without `def main()` will save the file but not start the app. Let's add the code for the Hello World app:
+Every `.py` app file must include a `main()` function to run. Running a .py file without `def main()` will save the file but not start the app. Let's add the code for the Hello World app:
 ```
 def main():
     name = input('Tell us your name')
