@@ -22,6 +22,9 @@
   --ifm-font-family-base: 'Poppins', sans-serif;
   --ifm-font-family-monospace: 'Ubuntu';
   --ifm-footer-background-color: #ebebeb;
+  --ra-color-tip: var(--ifm-color-primary);
+  --ra-color-tip: var(--ifm-color-warning);
+  --ra-admonition-background-color: var(--ifm-color-primary);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -35,6 +38,10 @@
   --ifm-color-primary-lightest: #f0e9d9;
   --ifm-background-color: #000000; /* main background color dark mode */
 }
+
+/* .admonition {
+  --ra-admonition-tip-color: var(--ifm-color-primary);
+} */
 
 @font-face {
   font-family: 'Poppins';
