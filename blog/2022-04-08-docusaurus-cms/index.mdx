@@ -3,7 +3,7 @@ slug: docusaurus-cms
 title: Use Docusaurus and GitHub Actions as a CMS
 description: A guide to setting up Docusaurus and GitHub Actions as a content management system to an existing GitHub Pages website
 image: /img/blog/docusaurus_gh_cms.png
-authors: [young]
+authors: [young, terrell]
 tags: [PyWeb.io, Docusaurus, CMS, GitHub Actions]
 keywords: [Docusaurus, GitHub Actions, CMS]
 ---
@@ -11,27 +11,27 @@ keywords: [Docusaurus, GitHub Actions, CMS]
 ![Docusaurus CMS](./docusaurus_gh_cms.png)
 
 
-## Problem
+## Problem ❓
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
 Adding a Docusaurus powered blog and tutorial section to the existing PyWeb.io website hosted on GitHub Pages. Docusaurus has excellent documentation on deploying to GitHub Pages. However, with a pre-existing deployed GitHub pages website, there is a need to add the Docusaurus generated static files to this deployment without disrupting the existing structure.
 
-## Solution
+## Solution ✔️
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
 The solution was to use Docusaurus to transform Markdown content files into static HTML files, and GitHub Actions to automatically build those files and deploy them from the Docusaurus repository to the pre-existing GitHub Pages repository.
 
 <!--truncate-->
 
-## Requirements
+## Requirements 📝
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
 1. A [Docusaurus](https://docusaurus.io/) source code repository (documentation repo).
-    * Follow [Docusaurus' instructions](https://docusaurus.io/docs) for getting started in setting up a project.
+    * Follow [Docusaurus' instructions](https://docusaurus.io/docs) for setting up a project.
     * Push this Docusaurus project to your documentation repository on [GitHub](https://github.com/).
 2. A GitHub repository with a branch setup for [GitHub Pages](https://pages.github.com/) (GH Pages repo).
 
-## Setup SSH Key
+## Setup SSH Key 🗝️
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
 1. Generate a new SSH key using [GitHub's instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). 
@@ -46,10 +46,10 @@ Do **not** add a passphrase. There is no need to add the key to your ssh-agent
 6. Select `New repository secret`. Select an [appropriate name](https://docs.github.com/en/actions/security-guides/encrypted-secrets#naming-your-secrets) for your secret. 
 7. Paste the contents of the **private**  SSH key file (should begin with `-----BEGIN OPENSSH PRIVATE KEY-----`) into the `Value` field, and then select `Add secret`.
 :::tip Note
-The **public** SSH key belongs in the GH Pages repo and the **private** SSH key belongs in your documentation repo
+The **public** SSH key belongs in the GH Pages repo and the **private** SSH key belongs in your documentation (Docusaurus) repo
 :::
 
-## Setup GitHub Actions Workflow
+## Setup GitHub Actions Workflow ▶️
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
 1. From the root of your documentation repo create a [workflow file](https://docs.github.com/en/actions/using-workflows#creating-a-workflow-file) with the following folder structure:
@@ -125,7 +125,7 @@ Take note of the comments on important values. Full script visible [here](https:
 
 :::
 
-## Setup Docusaurus Configuration
+## Setup Docusaurus Configuration ⚙️
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
 Because the documentation static files are nested in a path of the rest of the existing static webpage, it is important to update the `docusaurus.config.js` file in the documentation source. Change the `baseUrl` field to match the `destination_dir` selected in the workflow file's `actions-gh-pages@v3` step. For example: `/docs/`.
@@ -145,10 +145,10 @@ const config = {
   trailingSlash: true,
 ```
 
-## Conclusion
+## Conclusion 👋
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
 You should now be able to create content files for Docusaurus and have them auto-deploy once they are merged with your documentation source repository's `main` branch.
 Check out how PyWeb.io is using this set up for creating blog and tutorial content:
-* [Compose and Publish Blog Post](../docs/tutorial-contribute/blog-post)
-* [Compose and Publish Blog Tutorial](../docs/tutorial-contribute/tutorial)
+* [Compose and Publish Blog Post](/tutorial-contribute/blog-post)
+* [Compose and Publish Tutorial](/tutorial-contribute/tutorial)

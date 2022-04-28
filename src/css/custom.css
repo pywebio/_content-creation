@@ -17,7 +17,7 @@
   --ifm-color-primary-light: #543672;
   --ifm-color-primary-lighter: #573878;
   --ifm-color-primary-lightest: #634087;
-  --ifm-background-color: #ebebeb;
+  --ifm-background-color: #ebebeb; /* main backround color light mode */
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'Poppins', sans-serif;
   --ifm-font-family-monospace: 'Ubuntu';
@@ -33,7 +33,7 @@
   --ifm-color-primary-light: #ddcba6;
   --ifm-color-primary-lighter: #e2d2b3;
   --ifm-color-primary-lightest: #f0e9d9;
-  --ifm-background-color: #000000;
+  --ifm-background-color: #000000; /* main background color dark mode */
 }
 
 @font-face {
@@ -43,6 +43,7 @@
   src: url('https://fonts.googleapis.com/css2?family=Poppins&display=swap')
 }
 
+/* background */
 [data-theme='light'] nav {
   background-color: #ebebeb;
 }
@@ -192,56 +193,12 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
   font-weight: 400;
 }
 
+/* images (global) */
 img {
   border-radius: 15px;
 }
 
-.tutorial_button {
-  background-color: #b1a374;
-  border-radius: 4px;
-  width: 200px;
-  height: 44px;
+/* font size (global) */
+p, li {
+  font-size: 15px;
 }
-
-.tutorial_button:hover {
-  background-color: #8b7d4e;
-}
-
-.testing {
-  background-color: #412a58;
-}
-
-/* details {
-  background-color: #e9c7ffab;
-}
-
-details > summary {
-  font: 100px;
-  background-color: #9b9b9b33;
-  color: #412a58;
-}
-
-details[open] > summary {
-  background-color: rgb(15, 15, 216);
-}
-
-details > p {
-  border-radius: 0 0 10px 10px;
-  background-color: #8b7d4e;
-  padding: 2px 6px;
-  margin: 0;
-  box-shadow: 3px 3px 4px black;
-} */
-
-
-/* .navbar__item.navbar__link.button.button--primary {
-  background: #b1a374;
-  color: white;
-  border: none;
-}
-
-.navbar__item.navbar__link.button.button--primary:hover {
-  background: #8b7d4e;
-  color: white;
-  border: none;
-} */
