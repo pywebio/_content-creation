@@ -1,8 +1,8 @@
 ---
 id: getting-started-hello-world
 sidebar_position: 1
-title: Getting Started With PyWeb Builder (Hello World)
-description: Tutorial about building a basic web app with PyWeb builder
+title: Getting Started With PyWeb.io Builder (Hello World)
+description: A Tutorial on building a basic Hello World web app with PyWeb.io builder
 image: /img/tutorial/pywebio_builder_project.JPG
 keywords: [PyWeb Builder, PyWeb.io, tutorial, hello world]
 tags: [PyWeb Builder, beginner, tutorial]
@@ -59,7 +59,7 @@ Let's get started!
 
 After logging in, you will be brought to your dashboard which is used primarily to view your projects. Of course, there are no projects yet, so lets create one! Start by clicking the <Button backgroundColor='#4c3168' fontColor='white'>+ Create Project</Button> button at the top of the screen.
 
-![PyWeb.io create project](./pywebio_builder_create_project3.JPG)
+![PyWeb.io create project](./pywebio_builder_create_project.JPG)
 
 Fill in the required fields:
 
@@ -111,16 +111,26 @@ Upon creating a new `.py` file, both of these modules are imported automatically
 :::
 
 
-![PyWeb.io hello world code](./pywebio_builder_hello_world_code2.JPG)
+![PyWeb.io hello world code](./pywebio_builder_hello_world_code.JPG)
 
 Every `.py` app file must include a `main()` function to run. Running a .py file without `def main()` will save the file but not start the app. Let's add the code for the Hello World app:
 ```
 def main():
     name = input('Tell us your name')
     put_text('%s says: "Hello, world!"' %name)
+
+if __name__ == '__main__':
+    start_server(main, port=8888, debug=True)
 ```
 
-To test that the app is working properly, click the <Button backgroundColor='#0f9d58' fontColor='white'>Save & Run</Button> button, enter your name in the input box and click the <Button backgroundColor='#007bff' fontColor='white'>Submit</Button> button. The web preview page should refresh with the "Hello, world!" message and your name.
+:::tip Important
+
+It is best practice to use `if __name__ == '__main__':`
+`start_server(main, port=8888, debug=True)` as this conditional statement works for both local and PyWeb.io Builder development
+
+:::
+
+To test that the app is working properly, click the <Button backgroundColor='#0f9d58' fontColor='white'>Save & Run</Button> button, enter your name in the input box and click the <Button backgroundColor='#007bff' fontColor='white'>Submit</Button> button. The web preview page should display the "Hello, world!" message and your name.
 
 ![PyWeb.io hello world preview](./pywebio_builder_hello_world_preview.png)
 
@@ -132,12 +142,10 @@ Congrats! You have just built your first PyWeb.io web application. Now, let's la
 
 ![PyWeb.io launch app](./pywebio_builder_launch.JPG)
 
-PyWeb.io builder makes deploying an app incredibly simple. Follow these steps to deploy and view your Hello World app on the web:
+PyWeb.io builder makes deploying an app incredibly simple. Follow the steps below to deploy and view your Hello World app on the web. To stop hosting a web app, simply click the 🚫 icon.
 1. Click the <Button backgroundColor='white' borderStyle='solid' borderColor='blue'>➢ Launch</Button> button in the top right corner of the screen
 2. Click the 🚀 icon to copy the URL (URLs follow this pattern: {username}.pyweb.io/{project_slug}/{python_filename})
 3. Open a new browser tab or window and paste the URL into the address bar
-
-To stop hosting a web app, simply click the 🚫 icon.
 
 :::note
 
