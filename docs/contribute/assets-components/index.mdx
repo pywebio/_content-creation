@@ -21,6 +21,7 @@ import TabItem from '@theme/TabItem';
   - [Insert Admonition](#insert-admonition)
   - [Insert Tabs](#insert-tabs)
   - [Insert Details (drop-down)](#insert-details-drop-down)
+  - [Insert Custom Button](#insert-custom-button)
 
 
 
@@ -186,3 +187,92 @@ Details drop-down boxes provide a clean look for displaying information.
   </details>  
 </details>
 ```
+
+
+## Insert Custom Button
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
+
+export const Button = ({children, backgroundColor, fontColor, borderStyle, borderColor}) => (
+  <span
+    style={{
+      backgroundColor: backgroundColor,
+      borderRadius: '.313rem',
+      borderWidth: 1,
+      borderStyle: borderStyle,
+      borderColor: borderColor,
+      color: fontColor,
+      fontFamily: 'Segoe UI',
+      fontSize: '0.8rem',
+      fontWeight: '600',
+      paddingTop: '0.3rem',
+      paddingBottom: '0.35rem',
+      paddingLeft: '1.0rem',
+      paddingRight: '1.0rem',
+    }}>
+    {children}
+  </span>    
+)
+
+
+Custom <Button backgroundColor='#0f9d58' fontColor='white'>Buttons</Button> can be created with the use of JSX. Styling a button is very similar to CSS and you can pass in as many arguments as needed to avoid multiple functions for multiple buttons.
+
+:::note
+Styling properties belong in between the double style={{ }}. {children} is a necessary parameter and must be referenced outside of the style properties as shown below.
+:::
+
+Examples:
+
+```
+export const Button = ({children, backgroundColor, fontColor, borderStyle, borderColor}) => (
+  <span
+    style={{
+      backgroundColor: backgroundColor,
+      borderRadius: '.313rem',
+      borderWidth: 1,
+      borderStyle: borderStyle,
+      borderColor: borderColor,
+      color: fontColor,
+      fontFamily: 'Segoe UI',
+      fontSize: '0.8rem',
+      fontWeight: '600',
+      paddingTop: '0.3rem',
+      paddingBottom: '0.35rem',
+      paddingLeft: '1.0rem',
+      paddingRight: '1.0rem',
+    }}>
+    {children}
+  </span>    
+)
+```
+
+<br></br>
+<Button backgroundColor='#e88989'>Button</Button> with default black font
+<br></br>
+<br></br>
+
+```
+<Button backgroundColor='#0f9d58'>Button</Button>
+```
+
+<br></br>
+<Button backgroundColor='#4c3168' fontColor='white'>Button</Button> with white font
+<br></br>
+<br></br>
+
+```
+<Button backgroundColor='#0f9d58' fontColor='white'>Button</Button>
+```
+
+<br></br>
+<Button fontColor='black' backgroundColor='white' borderStyle='solid' borderColor='grey'>Button</Button> with a border
+<br></br>
+<br></br>
+
+```
+<Button backgroundColor='white' borderStyle='solid' borderColor='black'>Button</Button>
+```
+
+
+:::note
+Dark mode will change default black text to white. Dark mode will not change the font color if specified. 
+:::
