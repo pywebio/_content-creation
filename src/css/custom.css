@@ -22,9 +22,6 @@
   --ifm-font-family-base: 'Poppins', sans-serif;
   --ifm-font-family-monospace: 'Ubuntu';
   --ifm-footer-background-color: #ebebeb;
-  --ra-color-tip: var(--ifm-color-primary);
-  --ra-color-tip: var(--ifm-color-warning);
-  --ra-admonition-background-color: var(--ifm-color-primary);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -122,9 +119,9 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
 
 .mbri-help { /* button */
   background-color: #b1a374;
-  border-radius: 4px;
-  width: 200px;
-  height: 44px;
+  border-radius: .25rem;
+  width: 12.5rem;
+  height: 2.75rem;
 }
 
 .mbri-help:hover {
@@ -197,33 +194,35 @@ header.hero.hero--primary.heroBanner_src-pages-index-module {
   font-weight: 400;
 }
 
-/* images (global) */
-/* img {
-  border-radius: 15px;
-} */
 
 /* font size (global) */
 p, li {
-  font-size: 14px;
+  font-size: .875rem;
 }
 
 /* admonitions */
 .admonition-note {
   background-color: #f3e7ff;
-  border-left: 5px solid #4c3168
+  border-left: .313rem solid #4c3168
 }
 
 [data-theme='dark'] .admonition-note {
   background-color: #4c3168;
-  border-left: 5px solid #f3e7ff
+  border-left: .313rem solid #f3e7ff;
 }
 
 .admonition-tip {
   background-color: #ffe2e2;
-  border-left: 5px solid #e88989
+  border-left: .313rem solid #e88989
 }
 
 [data-theme='dark'] .admonition-tip {
   background-color: #e88989;
-  border-left: 5px solid #ffe2e2
+  border-left: .313rem solid #ffe2e2
 }
+
+
+/* images (global) */
+/* img {
+  border-radius: .938rem;
+} */
